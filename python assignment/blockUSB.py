@@ -6,7 +6,7 @@ def Disabling_usb_ports():
     try:
         key = winreg.HKEY_LOCAL_MACHINE  # assigning top-level registry key
         # path for USBSTOR service's registry key
-        sub_key = r"SYSTEM\CurrentControlSet\Services\USBSTOR"
+        sub_key = r""
         # opening the key with write access to change the key
         # with block to close the key after changing the values
         with winreg.OpenKey(key, sub_key, 0, winreg.KEY_SET_VALUE) as r_key:

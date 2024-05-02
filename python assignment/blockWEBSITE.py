@@ -1,7 +1,7 @@
 # code to block the facebook.com website
 def block_fb_website(website):
     try:
-        path_of_hosts_file = r'C:\Windows\System32\drivers\etc\hosts'
+        path_of_hosts_file = r''
         redirect_ip = '127.0.0.1'
 
         with open(path_of_hosts_file, 'a') as file:  # opening host_path to append

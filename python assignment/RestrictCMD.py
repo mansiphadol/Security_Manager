@@ -5,7 +5,7 @@ import winreg
 def Restricting_CMD():
     try:
         Key = winreg.HKEY_CURRENT_USER
-        sub_key = r"Software\Policies\Microsoft\Windows\System"
+        sub_key = r""
         with winreg.OpenKey(Key, sub_key, 0, winreg.KEY_SET_VALUE) as reg_key:
             # Disable Command Prompt
             # setting the value's data to the DWORD 2 to disable the cmd

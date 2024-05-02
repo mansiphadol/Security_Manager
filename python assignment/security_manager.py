@@ -12,7 +12,7 @@ def Disabling_usb_ports():
     try:
         key = winreg.HKEY_LOCAL_MACHINE  # assigning top-level registry key
         # path for USBSTOR service's registry key
-        sub_key = r"SYSTEM\CurrentControlSet\Services\USBSTOR"
+        sub_key = r""
         # opening the key with write access to change the key
         # with block to close the key after changing the values
         with winreg.OpenKey(key, sub_key, 0, winreg.KEY_SET_VALUE) as r_key:
@@ -57,7 +57,7 @@ def block_fb_website(website):  # method to block the website
 def Restricting_CMD():  # method to restrict the cmd
     try:
         Key = winreg.HKEY_CURRENT_USER
-        sub_key = r"Software\Policies\Microsoft\Windows\System"
+        sub_key = r""
         with winreg.OpenKey(Key, sub_key, 0, winreg.KEY_SET_VALUE) as reg_key:
             # Disable Command Prompt
             # setting the value's data to the DWORD 2 to disable the cmd
